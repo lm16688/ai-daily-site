@@ -527,77 +527,7 @@ function setCache(newsData, meta = {}) {
 }
 
 /* ─── DATA FETCHING ──────────────────────────────────── */
-async function fetchFromAPI() {
-  try {
-    const response = await fetch(CONFIG.DATA_URL + '?t=' + Date.now());
-    if (!response.ok) throw new Error('Network error');
-    
-    const data = await response.json();
-    
-    if (data.news && Array.isArray(data.news)) {
-      lastUpdateTime = new Date(data.meta?.lastUpdated || Date.now());
-      isFallback = data.meta?.isFallback || false;
-      return data.news;
-    }
-    
-    if (Array.isArray(data)) return data;
-    throw new Error('Invalid format');
-    
-  } catch (error) {
-    // 开发环境使用模拟数据
-    if (location.hostname === 'localhost' || location.protocol === 'file:') {
-      console.log('Using mock data');
-      return generateMockData();
-    }
-    throw error;
-  }
-}
 
-function generateMockData() {
-  const today = new Date().toISOString().split('T')[0];
-  return [
-    {id:1,cat:'news',hot:true,title:'OpenAI 发布 GPT-5 预览版',summary:'新模型在数学推理和代码生成方面表现优异。',source:'TechCrunch',date:today,url:'#',tags:['OpenAI','GPT-5']},
-    {id:2,cat:'tools',hot:true,title:'Cursor Pro 版本发布',summary:'支持多文件同时编辑和自动代码审查。',source:'The Verge',date:today,url:'#',tags:['Cursor','编程']},
-    {id:3,cat:'research',hot:true,title:'DeepMind 蛋白质预测新突破',summary:'AlphaFold 3 能够预测 DNA、RNA 结构。',source:'MIT',date:today,url:'#',tags:['DeepMind','生物AI']},
-    {id:4,cat:'industry',hot:false,title:'Cerebras 获 5 亿美元融资',summary:'AI 芯片公司估值超 40 亿美元。',source:'Bloomberg',date:today,url:'#',tags:['融资','芯片']},
-    {id:5,cat:'safety',hot:true,title:'欧盟通过 AI 法案最终版',summary:'全球首部全面监管 AI 的法律。',source:'Reuters',date:today,url:'#',tags:['监管','欧盟']},
-  ];
-}
-
-async function fetchNewsData(force = false) {
-  if (!force) {
-    const cached = getCache();
-    if (cached?.news?.length > 0) {
-      NEWS = cached.news;
-      renderAll();
-      document.getElementById('loadingOverlay').style.display = 'none';
-      return;
-    }
-  }
-
-  try {
-    document.getElementById('loadingOverlay').style.display = 'flex';
-    hideError();
-    
-    const data = await fetchFromAPI();
-    NEWS = data;
-    
-    setCache(NEWS, { lastUpdated: new Date().toISOString() });
-    
-  } catch (error) {
-    console.error('Fetch error:', error);
-    showError('获取数据失败，请检查网络或稍后重试');
-    
-    // 使用过期缓存
-    const cached = getCache();
-    if (cached?.news) {
-      NEWS = cached.news;
-      showError('显示缓存数据，点击右上角刷新重试');
-    }
-  } finally {
-    document.getElementById('loadingOverlay').style.display = 'none';
-  }
-}
 
 /* ─── UI HELPERS ─────────────────────────────────────── */
 function showError(msg) {
