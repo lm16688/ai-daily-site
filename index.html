@@ -610,6 +610,27 @@ let NEWS = [];  // 将从 news_data.json 动态加载
 /* ─── 动态加载新闻数据 ─── */
 async function loadNewsData() {
   try {
+    // 添加时间戳参数，防止缓存
+    const timestamp = new Date().getTime();
+    const response = await fetch(`news_data.json?t=${timestamp}`);
+    
+    if (!response.ok) throw new Error('无法加载数据');
+    
+    const data = await response.json();
+    NEWS = data.articles || [];
+
+    // 更新页面上的"已更新时间"
+    if (data.last_update) {
+      const updateDate = new Date(data.last_update);
+      document.getElementById('liveTime').textContent = 
+        `已更新 ${updateDate.toLocaleString('zh-CN', { 
+          month: 'numeric', 
+          day: 'numeric', 
+          hour: '2-digit', 
+          minute: '2-digit' 
+        })}`;
+    }
+    
     // GitHub Pages 路径兼容
     const basePath = window.location.pathname.includes('/ai-daily-site') 
       ? '/ai-daily-site' 
