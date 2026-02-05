@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;">
 <title>AI DAILY — 每日 AI 世界动态汇总</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -609,7 +610,11 @@ let NEWS = [];  // 将从 news_data.json 动态加载
 /* ─── 动态加载新闻数据 ─── */
 async function loadNewsData() {
   try {
-    const response = await fetch('news_data.json');
+    // GitHub Pages 路径兼容
+    const basePath = window.location.pathname.includes('/ai-daily') 
+      ? '/ai-daily' 
+      : '';
+    const response = await fetch(`${basePath}/news_data.json`);
     if (!response.ok) throw new Error('无法加载数据');
     
     const data = await response.json();
