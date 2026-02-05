@@ -611,8 +611,8 @@ let NEWS = [];  // 将从 news_data.json 动态加载
 async function loadNewsData() {
   try {
     // GitHub Pages 路径兼容
-    const basePath = window.location.pathname.includes('/ai-daily') 
-      ? '/ai-daily' 
+    const basePath = window.location.pathname.includes('/ai-daily-site') 
+      ? '/ai-daily-site' 
       : '';
     const response = await fetch(`${basePath}/news_data.json`);
     if (!response.ok) throw new Error('无法加载数据');
