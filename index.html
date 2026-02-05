@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;">
 <title>AI DAILY — 每日 AI 世界动态汇总</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,13 +20,12 @@
   --text:#dde0e8;
   --text-dim:#6b7a8f;
   --text-bright:#fff;
-  --accent:#7dd3fc;          /* cyan */
+  --accent:#7dd3fc;
   --accent-glow:rgba(125,211,252,.18);
   --accent-border:rgba(125,211,252,.28);
   --hot:#ff6b6b;
   --hot-bg:rgba(255,107,107,.1);
   --green:#4ade80;
-  /* category colours */
   --c-news:#7dd3fc;
   --c-tools:#86efac;
   --c-research:#c4b5fd;
@@ -71,7 +69,6 @@ header{
   display:flex;justify-content:space-between;align-items:center;
   flex-wrap:wrap;gap:18px;
 }
-/* logo */
 .logo{display:flex;align-items:center;gap:16px}
 .logo-diamond{
   font-size:32px;color:var(--accent);
@@ -86,13 +83,11 @@ header{
 }
 .logo-text p{font-size:11px;color:var(--text-dim);letter-spacing:.18em;margin-top:3px}
 
-/* stats row */
 .stats-row{display:flex;gap:24px}
 .stat{display:flex;flex-direction:column;align-items:center}
 .stat-val{font-size:21px;font-weight:700;color:var(--accent)}
 .stat-lbl{font-size:10px;color:var(--text-dim);letter-spacing:.06em;text-transform:uppercase}
 
-/* live badge */
 .live-badge{
   display:flex;align-items:center;gap:7px;
   background:var(--accent-glow);border:1px solid var(--accent-border);
@@ -111,12 +106,15 @@ header{
   position:relative;z-index:2;
   padding:18px 0 4px;display:flex;flex-direction:column;gap:14px;
 }
-/* search */
+.controls-header{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:12px;flex-wrap:wrap;
+}
 .search-wrap{
   display:flex;align-items:center;gap:8px;
   background:rgba(255,255,255,.04);
   border:1px solid var(--border);border-radius:10px;
-  padding:0 15px;max-width:460px;width:100%;
+  padding:0 15px;flex:1;max-width:400px;
   transition:border-color .2s;
 }
 .search-wrap:focus-within{border-color:var(--accent-border)}
@@ -127,8 +125,19 @@ header{
 }
 .search-wrap input::placeholder{color:var(--text-dim)}
 
-/* category pills */
-.cat-row{display:flex;gap:8px;flex-wrap:wrap}
+.refresh-btn{
+  display:flex;align-items:center;gap:6px;
+  background:var(--bg-card);border:1px solid var(--border);
+  color:var(--text-dim);border-radius:8px;
+  padding:8px 14px;font-size:12px;font-weight:500;
+  transition:all .2s;white-space:nowrap;
+}
+.refresh-btn:hover{border-color:var(--accent-border);color:var(--accent)}
+.refresh-btn:active{transform:scale(0.96)}
+.refresh-btn.spinning svg{animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.cat-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
 .cat-btn{
   display:flex;align-items:center;gap:6px;
   background:rgba(255,255,255,.04);border:1px solid var(--border);
@@ -181,7 +190,6 @@ header{
   padding:20px 18px 16px;
   position:relative;overflow:hidden;
   transition:border-color .25s,box-shadow .25s,transform .25s;
-  /* staggered fade-in */
   opacity:0;transform:translateY(18px);
 }
 .card.visible{
@@ -196,34 +204,26 @@ header{
   transform:translateY(-2px);
 }
 
-/* left colour stripe */
 .card::before{
   content:'';position:absolute;
   top:0;left:0;width:3px;height:100%;
-  /* set per category via inline style */
 }
-/* hot badge */
 .hot-badge{
   position:absolute;top:10px;right:10px;
   font-size:11px;font-weight:600;color:var(--hot);
   background:var(--hot-bg);border-radius:12px;padding:2px 8px;
   white-space:nowrap;
 }
-/* meta row */
 .card-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
 .card-cat{font-size:11px;font-weight:600;letter-spacing:.06em}
 .card-date{font-size:11px;color:var(--text-dim)}
-/* title */
 .card h3{font-size:15px;font-weight:600;color:#fff;line-height:1.35;margin-bottom:8px}
-/* summary */
 .card p{font-size:13px;color:var(--text-dim);line-height:1.55;margin-bottom:12px}
-/* tags */
 .card-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px}
 .card-tags span{
   font-size:11px;color:var(--text-dim);
   background:rgba(255,255,255,.06);border-radius:4px;padding:2px 8px;
 }
-/* footer */
 .card-foot{
   display:flex;justify-content:space-between;align-items:center;
   border-top:1px solid var(--border);padding-top:10px;
@@ -238,7 +238,6 @@ header{
 /* ─── SIDEBAR ───────────────────────────────────────────── */
 .sidebar{display:flex;flex-direction:column;gap:16px}
 
-/* shared side-card */
 .side-card{
   background:var(--bg-card);
   border:1px solid var(--border);border-radius:14px;padding:18px;
@@ -248,7 +247,6 @@ header{
   display:flex;align-items:center;gap:6px;margin-bottom:12px;
 }
 
-/* ── HOT LIST ── */
 .hot-list{display:flex;flex-direction:column;gap:2px}
 .hot-item{
   display:flex;align-items:flex-start;gap:10px;
@@ -263,7 +261,6 @@ header{
 }
 .hot-title{font-size:13px;color:#c8cdd8;line-height:1.4}
 
-/* ── XHS GENERATOR ── */
 .xhs-head{display:flex;justify-content:space-between;align-items:center}
 .xhs-toggle{
   font-size:12px;color:var(--accent);font-weight:500;
@@ -299,119 +296,6 @@ header{
 .copy-btn:active{transform:scale(.96)}
 .copy-btn.done{background:linear-gradient(135deg,#4ade80,#22c55e)}
 
-/* ── DOUYIN VIDEO GENERATOR ── */
-.dyt-head{display:flex;justify-content:space-between;align-items:center}
-.dyt-toggle{
-  font-size:12px;color:#fb7185;font-weight:500;
-  background:rgba(251,113,133,.12);border:1px solid rgba(251,113,133,.28);
-  border-radius:14px;padding:3px 13px;transition:background .2s;
-}
-.dyt-toggle:hover{background:rgba(251,113,133,.22)}
-.dyt-desc{font-size:12px;color:var(--text-dim);line-height:1.5;margin-bottom:12px}
-
-.dyt-body{display:none;animation:fadeDown .3s ease}
-.dyt-body.open{display:block}
-
-/* options row */
-.dyt-options{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.dyt-opt-label{font-size:11px;color:var(--text-dim);width:100%;margin-bottom:2px}
-.dyt-opt-group{display:flex;gap:6px;flex-wrap:wrap}
-.dyt-chip{
-  font-size:11.5px;padding:4px 11px;border-radius:16px;
-  background:rgba(255,255,255,.05);border:1px solid var(--border);
-  color:var(--text-dim);transition:all .18s;
-}
-.dyt-chip:hover{border-color:var(--border-strong);color:var(--text)}
-.dyt-chip.sel{
-  background:rgba(251,113,133,.14);border-color:rgba(251,113,133,.35);color:#fb7185;
-}
-
-/* generate btn */
-.dyt-gen-btn{
-  width:100%;padding:9px;border-radius:9px;font-size:13px;font-weight:600;
-  background:linear-gradient(135deg,#fb7185,#e11d48);
-  color:#fff;letter-spacing:.03em;
-  transition:filter .2s,transform .1s;margin-bottom:14px;
-}
-.dyt-gen-btn:hover{filter:brightness(1.12)}
-.dyt-gen-btn:active{transform:scale(.97)}
-.dyt-gen-btn:disabled{filter:brightness(.55);cursor:not-allowed;transform:none}
-
-/* generating overlay */
-.dyt-generating{
-  display:none;flex-direction:column;align-items:center;gap:10px;
-  padding:24px 0;
-}
-.dyt-generating.show{display:flex}
-.dyt-spinner{
-  width:36px;height:36px;border:3px solid rgba(251,113,133,.25);
-  border-top-color:#fb7185;border-radius:50%;
-  animation:spin .7s linear infinite;
-}
-@keyframes spin{to{transform:rotate(360deg)}}
-.dyt-gen-status{font-size:12px;color:var(--text-dim)}
-.dyt-gen-pct{font-size:11px;color:#fb7185;font-weight:600}
-
-/* preview viewport  – 9:16 portrait card */
-.dyt-preview-wrap{display:none;flex-direction:column;gap:10px}
-.dyt-preview-wrap.show{display:flex}
-.dyt-viewport{
-  width:100%;aspect-ratio:9/16;max-height:380px;
-  border-radius:12px;overflow:hidden;
-  background:#000;position:relative;
-  border:1px solid var(--border);
-}
-.dyt-viewport canvas{width:100%;height:100%;display:block}
-/* play-pause overlay */
-.dyt-play-overlay{
-  position:absolute;inset:0;
-  display:flex;align-items:center;justify-content:center;
-  background:rgba(0,0,0,.18);opacity:0;
-  transition:opacity .2s;pointer-events:none;
-}
-.dyt-viewport:hover .dyt-play-overlay{opacity:1;pointer-events:auto}
-.dyt-play-btn{
-  width:44px;height:44px;border-radius:50%;
-  background:rgba(0,0,0,.55);backdrop-filter:blur(4px);
-  display:flex;align-items:center;justify-content:center;
-  border:2px solid rgba(255,255,255,.35);
-  transition:background .2s;
-}
-.dyt-play-btn:hover{background:rgba(0,0,0,.75)}
-.dyt-play-btn svg{width:18px;height:18px;fill:#fff;margin-left:2px}
-.dyt-play-btn.playing svg{margin-left:0}
-
-/* progress bar */
-.dyt-progress-track{
-  width:100%;height:3px;background:rgba(255,255,255,.1);
-  border-radius:2px;overflow:hidden;
-}
-.dyt-progress-fill{
-  height:100%;width:0%;background:linear-gradient(90deg,#fb7185,#f43f5e);
-  border-radius:2px;transition:width .15s linear;
-}
-
-/* action buttons row */
-.dyt-actions{display:flex;gap:8px}
-.dyt-dl-btn{
-  flex:1;padding:8px;border-radius:8px;font-size:12.5px;font-weight:600;
-  background:linear-gradient(135deg,#fb7185,#e11d48);color:#fff;
-  transition:filter .2s,transform .1s;
-}
-.dyt-dl-btn:hover{filter:brightness(1.12)}
-.dyt-dl-btn:active{transform:scale(.96)}
-.dyt-dl-btn.done{background:linear-gradient(135deg,#4ade80,#22c55e)}
-
-.dyt-cp-btn{
-  flex:1;padding:8px;border-radius:8px;font-size:12.5px;font-weight:600;
-  background:rgba(255,255,255,.07);border:1px solid var(--border);color:var(--text);
-  transition:filter .2s,transform .1s;
-}
-.dyt-cp-btn:hover{filter:brightness(1.15)}
-.dyt-cp-btn:active{transform:scale(.96)}
-.dyt-cp-btn.done{background:rgba(134,239,172,.15);border-color:rgba(134,239,172,.35);color:#86efac}
-
-/* ── TAG CLOUD ── */
 .tag-cloud{display:flex;flex-wrap:wrap;gap:6px}
 .tag{
   font-size:12px;color:var(--accent);
@@ -420,6 +304,28 @@ header{
   transition:background .2s;
 }
 .tag:hover{background:rgba(125,211,252,.28)}
+
+/* ─── LOADING & ERROR STATES ────────────────────────────── */
+.loading-overlay{
+  position:fixed;inset:0;background:rgba(11,13,19,.95);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  z-index:100;gap:20px;
+}
+.loading-spinner{
+  width:50px;height:50px;border:3px solid rgba(125,211,252,.1);
+  border-top-color:var(--accent);border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-text{color:var(--accent);font-size:14px;letter-spacing:.1em}
+.error-msg{
+  background:rgba(255,107,107,.1);border:1px solid var(--hot);
+  color:var(--hot);padding:12px 20px;border-radius:8px;
+  font-size:13px;margin-bottom:12px;display:none;
+}
+.error-msg.success{
+  background:rgba(74,222,128,.1);border-color:var(--green);color:var(--green);
+}
 
 /* ─── FOOTER ────────────────────────────────────────────── */
 footer{
@@ -437,6 +343,8 @@ footer p{font-size:11px;color:#4a5568}
 @media(max-width:900px){
   .main-layout{grid-template-columns:1fr}
   .sidebar{order:-1}
+  .controls-header{flex-direction:column;align-items:stretch}
+  .search-wrap{max-width:none}
 }
 @media(max-width:560px){
   .shell{padding:0 16px}
@@ -448,6 +356,12 @@ footer p{font-size:11px;color:#4a5568}
 </style>
 </head>
 <body>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-spinner"></div>
+  <div class="loading-text">正在获取今日 AI 资讯...</div>
+</div>
 
 <!-- ═══════════════ HEADER ═══════════════ -->
 <header>
@@ -462,13 +376,13 @@ footer p{font-size:11px;color:#4a5568}
   </div>
   <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap">
     <div class="stats-row">
-      <div class="stat"><span class="stat-val" id="statTotal">20</span><span class="stat-lbl">资讯数</span></div>
-      <div class="stat"><span class="stat-val" id="statTools">8</span><span class="stat-lbl">工具数</span></div>
-      <div class="stat"><span class="stat-val" id="statHot">9</span><span class="stat-lbl">热点数</span></div>
+      <div class="stat"><span class="stat-val" id="statTotal">--</span><span class="stat-lbl">资讯数</span></div>
+      <div class="stat"><span class="stat-val" id="statTools">--</span><span class="stat-lbl">工具数</span></div>
+      <div class="stat"><span class="stat-val" id="statHot">--</span><span class="stat-lbl">热点数</span></div>
     </div>
     <div class="live-badge">
       <span class="live-dot"></span>
-      <span id="liveTime">已更新 …</span>
+      <span id="liveTime">更新中...</span>
     </div>
   </div>
 </div>
@@ -478,13 +392,22 @@ footer p{font-size:11px;color:#4a5568}
 <!-- ═══════════════ CONTROLS ═══════════════ -->
 <div class="shell">
 <div class="controls">
-  <div class="search-wrap">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input type="text" id="searchInput" placeholder="搜索资讯、工具、标签…" autocomplete="off">
+  <div class="error-msg" id="errorMsg">
+    <span id="errorText"></span>
   </div>
-  <div class="cat-row" id="catRow">
-    <!-- injected by JS -->
+  
+  <div class="controls-header">
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="搜索资讯、工具、标签…" autocomplete="off">
+    </div>
+    <button class="refresh-btn" id="refreshBtn" onclick="checkForUpdates()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+      检查更新
+    </button>
   </div>
+  
+  <div class="cat-row" id="catRow"></div>
 </div>
 </div>
 
@@ -496,11 +419,9 @@ footer p{font-size:11px;color:#4a5568}
   <section>
     <div class="section-head">
       <h2><span class="accent-dash">—</span> 今日汇总</h2>
-      <span class="item-count" id="itemCount">20 项</span>
+      <span class="item-count" id="itemCount">加载中...</span>
     </div>
-    <div class="cards-grid" id="cardsGrid">
-      <!-- injected by JS -->
-    </div>
+    <div class="cards-grid" id="cardsGrid"></div>
   </section>
 
   <!-- RIGHT: sidebar -->
@@ -527,66 +448,6 @@ footer p{font-size:11px;color:#4a5568}
       </div>
     </div>
 
-    <!-- DOUYIN VIDEO GENERATOR -->
-    <div class="side-card">
-      <div class="dyt-head">
-        <h3 style="margin-bottom:0">🎬 抖音视频生成</h3>
-        <button class="dyt-toggle" id="dytToggle">展开</button>
-      </div>
-      <p class="dyt-desc">根据今日热点自动生成 9:16 竖屏短视频，可直接下载发布到抖音。</p>
-      <div class="dyt-body" id="dytBody">
-
-        <!-- options -->
-        <div class="dyt-options">
-          <div>
-            <div class="dyt-opt-label">📌 热点数量</div>
-            <div class="dyt-opt-group" id="dytCountGroup">
-              <button class="dyt-chip sel" data-val="3">Top 3</button>
-              <button class="dyt-chip" data-val="5">Top 5</button>
-              <button class="dyt-chip" data-val="7">Top 7</button>
-            </div>
-          </div>
-          <div>
-            <div class="dyt-opt-label">⏱️ 每页停留</div>
-            <div class="dyt-opt-group" id="dytDurGroup">
-              <button class="dyt-chip sel" data-val="3">3 秒</button>
-              <button class="dyt-chip" data-val="4">4 秒</button>
-              <button class="dyt-chip" data-val="5">5 秒</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- generate -->
-        <button class="dyt-gen-btn" id="dytGenBtn">⚡ 生成视频</button>
-
-        <!-- generating spinner -->
-        <div class="dyt-generating" id="dytGenerating">
-          <div class="dyt-spinner"></div>
-          <div class="dyt-gen-status" id="dytGenStatus">正在生成视频…</div>
-          <div class="dyt-gen-pct" id="dytGenPct">0%</div>
-        </div>
-
-        <!-- preview + controls -->
-        <div class="dyt-preview-wrap" id="dytPreviewWrap">
-          <div class="dyt-viewport">
-            <canvas id="dytCanvas"></canvas>
-            <div class="dyt-play-overlay">
-              <button class="dyt-play-btn" id="dytPlayBtn">
-                <!-- play icon (default) -->
-                <svg id="dytPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-              </button>
-            </div>
-          </div>
-          <div class="dyt-progress-track"><div class="dyt-progress-fill" id="dytProgressFill"></div></div>
-          <div class="dyt-actions">
-            <button class="dyt-dl-btn" id="dytDlBtn">⬇️ 下载视频</button>
-            <button class="dyt-cp-btn" id="dytCpBtn">📋 复制脚本</button>
-          </div>
-        </div>
-
-      </div><!-- /dyt-body -->
-    </div>
-
     <!-- tag cloud -->
     <div class="side-card">
       <h3>🏷️ 热门标签</h3>
@@ -599,114 +460,197 @@ footer p{font-size:11px;color:#4a5568}
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <footer>
-<p>AI DAILY · 数据来源：TechCrunch / MIT Technology Review / IBM Think / Crescendo AI / DataNorth AI 等 · 每日自动更新 · 内容仅供参考</p>
+<p>AI DAILY · 数据来源：NewsAPI / TechCrunch / MIT Technology Review / 机器之心 / 36氪 · 每日自动更新 · 内容仅供参考</p>
 </footer>
 
 <!-- ═══════════════ DATA + LOGIC ═══════════════ -->
 <script>
-/* ─── DATA ───────────────────────────────────────────── */
-let NEWS = [];  // 将从 news_data.json 动态加载
+/* ─── CONFIGURATION ──────────────────────────────────── */
+const CONFIG = {
+  DATA_URL: './news_data.json',
+  CACHE_KEY: 'ai_daily_cache',
+  CACHE_TTL: 6 * 60 * 60 * 1000, // 6小时
+  REFRESH_INTERVAL: 30 * 60 * 1000, // 30分钟检查一次
+};
 
-/* ─── 动态加载新闻数据 ─── */
-async function loadNewsData() {
-  try {
-    // 添加时间戳参数，防止缓存
-    const timestamp = new Date().getTime();
-    const response = await fetch(`news_data.json?t=${timestamp}`);
-    
-    if (!response.ok) throw new Error('无法加载数据');
-    
-    const data = await response.json();
-    NEWS = data.articles || [];
+/* ─── CATEGORY CONFIG ────────────────────────────────── */
+const CATS = [
+  {id:'all',     label:'全部',     icon:'🌐'},
+  {id:'news',    label:'行业动态', icon:'📰'},
+  {id:'tools',   label:'AI 工具',  icon:'🛠️'},
+  {id:'research',label:'研究前沿', icon:'🔬'},
+  {id:'industry',label:'商业应用', icon:'💼'},
+  {id:'safety',  label:'安全与伦理',icon:'🛡️'},
+];
 
-    // 更新页面上的"已更新时间"
-    if (data.last_update) {
-      const updateDate = new Date(data.last_update);
-      document.getElementById('liveTime').textContent = 
-        `已更新 ${updateDate.toLocaleString('zh-CN', { 
-          month: 'numeric', 
-          day: 'numeric', 
-          hour: '2-digit', 
-          minute: '2-digit' 
-        })}`;
-    }
-    
-    // GitHub Pages 路径兼容
-    const basePath = window.location.pathname.includes('/ai-daily-site') 
-      ? '/ai-daily-site' 
-      : '';
-    const response = await fetch(`${basePath}/news_data.json`);
-    if (!response.ok) throw new Error('无法加载数据');
-    
-    const data = await response.json();
-    NEWS = data.articles || [];
-    
-    console.log(`✓ 成功加载 ${NEWS.length} 篇新闻`);
-    console.log(`📅 最后更新: ${data.last_update || '未知'}`);
-    
-    if (data.last_update) {
-      const updateDate = new Date(data.last_update);
-      document.getElementById('liveTime').textContent = 
-        `已更新 ${updateDate.toLocaleString('zh-CN', { 
-          month: 'numeric', 
-          day: 'numeric', 
-          hour: '2-digit', 
-          minute: '2-digit' 
-        })}`;
-    }
-    
-    return true;
-  } catch (error) {
-    console.warn('⚠️ 加载 news_data.json 失败，使用备用数据');
-    
-    NEWS = [
-      {id:1,cat:'news',hot:true,
-       title:'2026：AI 从炒作走向务实',
-       summary:'行业重心从大型语言模型转向实际部署。小模型、边缘智能成为焦点，智能体应用快速落地。',
-       source:'TechCrunch',date:'2026-02-03',
-       url:'https://techcrunch.com/',
-       tags:['智能体','行业趋势']},
-
-      {id:2,cat:'tools',hot:true,
-       title:'ChatGPT 5.2：深度推理 + 自主执行',
-       summary:'GPT 5.2 整合了深度推理、长期记忆和自主任务执行能力，支持复杂场景应用。',
-       source:'OpenAI',date:'2026-02-01',
-       url:'https://openai.com/',
-       tags:['ChatGPT','推理模型']},
-
-      {id:3,cat:'research',hot:true,
-       title:'世界模型：下一代 AI 突破方向',
-       summary:'多家公司正在开发能够在 3D 空间中理解物理规律的 AI 世界模型。',
-       source:'TechCrunch',date:'2026-02-02',
-       url:'https://techcrunch.com/',
-       tags:['世界模型','研究']},
-
-      {id:4,cat:'industry',hot:false,
-       title:'数据中心支出超 5000 亿美元',
-       summary:'顶级科技公司数据中心资本支出预计突破 5000 亿美元。',
-       source:'Bloomberg',date:'2026-02-02',
-       url:'https://bloomberg.com/',
-       tags:['投资','基础设施']},
-
-      {id:5,cat:'safety',hot:false,
-       title:'AI 监管法案密集落地',
-       summary:'多个国家和地区推进 AI 治理立法，从概念走向执行。',
-       source:'Reuters',date:'2026-01-15',
-       url:'https://reuters.com/',
-       tags:['AI治理','法规']},
-    ];
-    
-    return false;
-  }
-}
-
-/* ─── STATE ──────────────────────────────────────────── */
+const CAT_COLOR = {
+  news:'var(--c-news)',
+  tools:'var(--c-tools)',
+  research:'var(--c-research)',
+  industry:'var(--c-industry)',
+  safety:'var(--c-safety)'
+};
 
 /* ─── STATE ──────────────────────────────────────────── */
 let activeCat = 'all';
 let searchVal = '';
+let NEWS = [];
+let lastUpdateTime = null;
+let isFallback = false;
 
-/* ─── HELPERS ────────────────────────────────────────── */
+/* ─── CACHE MANAGEMENT ───────────────────────────────── */
+function getCache() {
+  try {
+    const cached = localStorage.getItem(CONFIG.CACHE_KEY);
+    if (!cached) return null;
+    const data = JSON.parse(cached);
+    if (Date.now() - data.timestamp > CONFIG.CACHE_TTL) {
+      localStorage.removeItem(CONFIG.CACHE_KEY);
+      return null;
+    }
+    return data;
+  } catch (e) {
+    return null;
+  }
+}
+
+function setCache(newsData, meta = {}) {
+  try {
+    localStorage.setItem(CONFIG.CACHE_KEY, JSON.stringify({
+      timestamp: Date.now(),
+      news: newsData,
+      meta: meta
+    }));
+  } catch (e) {
+    console.warn('Cache failed:', e);
+  }
+}
+
+/* ─── DATA FETCHING ──────────────────────────────────── */
+async function fetchFromAPI() {
+  try {
+    const response = await fetch(CONFIG.DATA_URL + '?t=' + Date.now());
+    if (!response.ok) throw new Error('Network error');
+    
+    const data = await response.json();
+    
+    if (data.news && Array.isArray(data.news)) {
+      lastUpdateTime = new Date(data.meta?.lastUpdated || Date.now());
+      isFallback = data.meta?.isFallback || false;
+      return data.news;
+    }
+    
+    if (Array.isArray(data)) return data;
+    throw new Error('Invalid format');
+    
+  } catch (error) {
+    // 开发环境使用模拟数据
+    if (location.hostname === 'localhost' || location.protocol === 'file:') {
+      console.log('Using mock data');
+      return generateMockData();
+    }
+    throw error;
+  }
+}
+
+function generateMockData() {
+  const today = new Date().toISOString().split('T')[0];
+  return [
+    {id:1,cat:'news',hot:true,title:'OpenAI 发布 GPT-5 预览版',summary:'新模型在数学推理和代码生成方面表现优异。',source:'TechCrunch',date:today,url:'#',tags:['OpenAI','GPT-5']},
+    {id:2,cat:'tools',hot:true,title:'Cursor Pro 版本发布',summary:'支持多文件同时编辑和自动代码审查。',source:'The Verge',date:today,url:'#',tags:['Cursor','编程']},
+    {id:3,cat:'research',hot:true,title:'DeepMind 蛋白质预测新突破',summary:'AlphaFold 3 能够预测 DNA、RNA 结构。',source:'MIT',date:today,url:'#',tags:['DeepMind','生物AI']},
+    {id:4,cat:'industry',hot:false,title:'Cerebras 获 5 亿美元融资',summary:'AI 芯片公司估值超 40 亿美元。',source:'Bloomberg',date:today,url:'#',tags:['融资','芯片']},
+    {id:5,cat:'safety',hot:true,title:'欧盟通过 AI 法案最终版',summary:'全球首部全面监管 AI 的法律。',source:'Reuters',date:today,url:'#',tags:['监管','欧盟']},
+  ];
+}
+
+async function fetchNewsData(force = false) {
+  if (!force) {
+    const cached = getCache();
+    if (cached?.news?.length > 0) {
+      NEWS = cached.news;
+      renderAll();
+      document.getElementById('loadingOverlay').style.display = 'none';
+      return;
+    }
+  }
+
+  try {
+    document.getElementById('loadingOverlay').style.display = 'flex';
+    hideError();
+    
+    const data = await fetchFromAPI();
+    NEWS = data;
+    
+    setCache(NEWS, { lastUpdated: new Date().toISOString() });
+    
+  } catch (error) {
+    console.error('Fetch error:', error);
+    showError('获取数据失败，请检查网络或稍后重试');
+    
+    // 使用过期缓存
+    const cached = getCache();
+    if (cached?.news) {
+      NEWS = cached.news;
+      showError('显示缓存数据，点击右上角刷新重试');
+    }
+  } finally {
+    document.getElementById('loadingOverlay').style.display = 'none';
+  }
+}
+
+/* ─── UI HELPERS ─────────────────────────────────────── */
+function showError(msg) {
+  const el = document.getElementById('errorMsg');
+  document.getElementById('errorText').textContent = msg;
+  el.style.display = 'block';
+  el.classList.remove('success');
+}
+
+function showSuccess(msg) {
+  const el = document.getElementById('errorMsg');
+  document.getElementById('errorText').textContent = msg;
+  el.style.display = 'block';
+  el.classList.add('success');
+  setTimeout(hideError, 3000);
+}
+
+function hideError() {
+  document.getElementById('errorMsg').style.display = 'none';
+}
+
+/* ─── CHECK UPDATES ──────────────────────────────────── */
+async function checkForUpdates() {
+  const btn = document.getElementById('refreshBtn');
+  btn.classList.add('spinning');
+  btn.disabled = true;
+  
+  try {
+    const response = await fetch(CONFIG.DATA_URL + '?t=' + Date.now());
+    const data = await response.json();
+    const newNews = data.news || [];
+    
+    // 简单比较：检查数量和第一条
+    const currentIds = NEWS.map(n => n.id).join(',');
+    const newIds = newNews.map(n => n.id).join(',');
+    
+    if (currentIds !== newIds && newNews.length > 0) {
+      NEWS = newNews;
+      setCache(NEWS, data.meta);
+      renderAll();
+      showSuccess('✅ 已更新到最新内容！');
+    } else {
+      showSuccess('ℹ️ 当前已是最新内容');
+    }
+  } catch (e) {
+    showError('检查更新失败，请稍后重试');
+  } finally {
+    btn.classList.remove('spinning');
+    btn.disabled = false;
+  }
+}
+
+/* ─── RENDER FUNCTIONS ───────────────────────────────── */
 function filtered(){
   return NEWS.filter(item => {
     const matchCat = activeCat === 'all' || item.cat === activeCat;
@@ -722,36 +666,33 @@ function filtered(){
 function catLabel(id){ return CATS.find(c=>c.id===id)?.label || id; }
 function catCount(id){ return id==='all' ? NEWS.length : NEWS.filter(i=>i.cat===id).length; }
 
-/* ─── XHS NOTE GENERATOR ─────────────────────────────── */
 function generateXHS(){
-  const today = new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit'});
-  const hot   = NEWS.filter(i=>i.hot).slice(0,5);
+  const today = new Date().toLocaleDateString('zh-CN');
+  const hot = NEWS.filter(i=>i.hot).slice(0,5);
   const tools = NEWS.filter(i=>i.cat==='tools').slice(0,3);
-  const res   = NEWS.filter(i=>i.cat==='research').slice(0,2);
+  const res = NEWS.filter(i=>i.cat==='research').slice(0,2);
   const ranks = ['🥇','🥈','🥉','④','⑤'];
 
   let n = `🤖 AI日报 | ${today}\n`;
   n += `━━━━━━━━━━━━━━━━━━━━━━\n\n`;
   n += `✨ 今日必看 TOP热点\n\n`;
-  hot.forEach((item,i) => { n += `${ranks[i]} ${item.title}\n→ ${item.summary}\n\n`; });
+  hot.forEach((item,i) => { n += `${ranks[i]} ${item.title}\n→ ${item.summary.slice(0,60)}...\n\n`; });
 
   n += `━━━━━━━━━━━━━━━━━━━━━━\n`;
   n += `🛠️ 今日工具推荐\n\n`;
-  tools.forEach(item => { n += `💎 ${item.title}\n${item.summary}\n\n`; });
+  tools.forEach(item => { n += `💎 ${item.title}\n${item.summary.slice(0,50)}...\n\n`; });
 
   n += `━━━━━━━━━━━━━━━━━━━━━━\n`;
   n += `🔬 前沿研究一瞥\n\n`;
-  res.forEach(item => { n += `📌 ${item.title}\n${item.summary}\n\n`; });
+  res.forEach(item => { n += `📌 ${item.title}\n${item.summary.slice(0,50)}...\n\n`; });
 
   n += `━━━━━━━━━━━━━━━━━━━━━━\n`;
   n += `💡 今日 AI 金句\n`;
   n += `"2026 不是 AI 的终结，而是它从炒作走向务实的起点。"\n\n`;
-  n += `🔗 更多详情访问 AI Daily 汇总站\n`;
-  n += `#AI日报 #人工智能 #AI工具 #科技资讯 #小红书`;
+  n += `#AI日报 #人工智能 #AI工具 #科技资讯`;
   return n;
 }
 
-/* ─── RENDER ─────────────────────────────────────────── */
 function renderCatBar(){
   const el = document.getElementById('catRow');
   el.innerHTML = CATS.map(c => `
@@ -759,6 +700,7 @@ function renderCatBar(){
       <span>${c.icon}</span>${c.label}
       <span class="cnt">${catCount(c.id)}</span>
     </button>`).join('');
+  
   el.querySelectorAll('.cat-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       activeCat = btn.dataset.cat;
@@ -772,8 +714,14 @@ function renderCards(){
   document.getElementById('itemCount').textContent = items.length + ' 项';
 
   const grid = document.getElementById('cardsGrid');
+  
+  if (items.length === 0) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--text-dim)">暂无相关资讯</div>';
+    return;
+  }
+  
   grid.innerHTML = items.map((item,idx) => `
-    <article class="card" style="--stripe:${CAT_COLOR[item.cat]};animation-delay:${idx*80}ms" data-idx="${idx}">
+    <article class="card" data-idx="${idx}">
       <style>.card[data-idx="${idx}"]::before{background:${CAT_COLOR[item.cat]}}</style>
       ${item.hot ? '<span class="hot-badge">🔥 热点</span>' : ''}
       <div class="card-meta">
@@ -784,12 +732,11 @@ function renderCards(){
       <p>${item.summary}</p>
       <div class="card-tags">${item.tags.map(t=>`<span>${t}</span>`).join('')}</div>
       <div class="card-foot">
-        <span class="card-source">来源：${item.source}</span>
+        <span class="card-source">${item.source}</span>
         <a href="${item.url}" target="_blank" rel="noopener" class="read-link">查看原文 →</a>
       </div>
     </article>`).join('');
 
-  // stagger visibility
   requestAnimationFrame(() => {
     grid.querySelectorAll('.card').forEach((card,i) => {
       setTimeout(() => card.classList.add('visible'), i * 75);
@@ -799,17 +746,17 @@ function renderCards(){
 
 function renderHotList(){
   const hots = NEWS.filter(i=>i.hot).slice(0,6);
-  document.getElementById('hotList').innerHTML = hots.map((item,i) => `
-    <a href="${item.url}" target="_blank" rel="noopener" class="hot-item">
+  document.getElementById('hotList').innerHTML = hots.length ? hots.map((item,i) => `
+    <a href="${item.url}" target="_blank" class="hot-item">
       <span class="hot-rank">${i+1}</span>
       <span class="hot-title">${item.title}</span>
-    </a>`).join('');
+    </a>`).join('') : '<div style="color:var(--text-dim);padding:10px">暂无热点</div>';
 }
 
 function renderTagCloud(){
   const tags = [...new Set(NEWS.flatMap(i=>i.tags))];
   const el = document.getElementById('tagCloud');
-  el.innerHTML = tags.map(t => `<span class="tag" data-tag="${t}">#${t}</span>`).join('');
+  el.innerHTML = tags.length ? tags.map(t => `<span class="tag" data-tag="${t}">#${t}</span>`).join('') : '<span style="color:var(--text-dim);font-size:12px">暂无标签</span>';
   el.querySelectorAll('.tag').forEach(span => {
     span.addEventListener('click', () => {
       searchVal = span.dataset.tag;
@@ -824,9 +771,9 @@ function renderXHS(){
 }
 
 function renderStats(){
-  document.getElementById('statTotal').textContent = NEWS.length;
-  document.getElementById('statTools').textContent = NEWS.filter(i=>i.cat==='tools').length;
-  document.getElementById('statHot').textContent  = NEWS.filter(i=>i.hot).length;
+  document.getElementById('statTotal').textContent = NEWS.length || '--';
+  document.getElementById('statTools').textContent = NEWS.filter(i=>i.cat==='tools').length || '--';
+  document.getElementById('statHot').textContent = NEWS.filter(i=>i.hot).length || '--';
 }
 
 function renderAll(){
@@ -836,22 +783,39 @@ function renderAll(){
   renderTagCloud();
   renderXHS();
   renderStats();
+  updateTime();
 }
 
-/* ─── SEARCH LISTENER ────────────────────────────────── */
+function updateTime(){
+  const now = new Date();
+  const m = String(now.getMonth()+1).padStart(2,'0');
+  const d = String(now.getDate()).padStart(2,'0');
+  const h = String(now.getHours()).padStart(2,'0');
+  const mi = String(now.getMinutes()).padStart(2,'0');
+  
+  let timeStr = `${m}月${d}日 ${h}:${mi}`;
+  if (lastUpdateTime) {
+    const diff = Math.floor((now - lastUpdateTime) / 60000);
+    if (diff < 1) timeStr += ' (刚刚)';
+    else if (diff < 60) timeStr += ` (${diff}分钟前)`;
+    if (isFallback) timeStr += ' [备用]';
+  }
+  
+  document.getElementById('liveTime').textContent = `已更新 ${timeStr}`;
+}
+
+/* ─── EVENT LISTENERS ────────────────────────────────── */
 document.getElementById('searchInput').addEventListener('input', e => {
   searchVal = e.target.value;
   renderAll();
 });
 
-/* ─── XHS TOGGLE ─────────────────────────────────────── */
 document.getElementById('xhsToggle').addEventListener('click', function(){
   const body = document.getElementById('xhsBody');
   const open = body.classList.toggle('open');
   this.textContent = open ? '收起' : '展开';
 });
 
-/* ─── COPY BTN ───────────────────────────────────────── */
 document.getElementById('copyBtn').addEventListener('click', function(){
   const text = document.getElementById('xhsPre').textContent;
   navigator.clipboard.writeText(text).then(() => {
@@ -864,469 +828,21 @@ document.getElementById('copyBtn').addEventListener('click', function(){
   });
 });
 
-/* ─── DOUYIN VIDEO GENERATOR ENGINE ──────────────────── */
-(function(){
-  /* ── chip toggle helper ── */
-  function chipGroup(containerId, cb){
-    const el = document.getElementById(containerId);
-    el.querySelectorAll('.dyt-chip').forEach(btn => {
-      btn.addEventListener('click', function(){
-        el.querySelectorAll('.dyt-chip').forEach(b=>b.classList.remove('sel'));
-        this.classList.add('sel');
-        cb(this.dataset.val);
-      });
-    });
-  }
-
-  let dytCount = 3, dytDur = 3;
-  chipGroup('dytCountGroup', v => { dytCount = +v; });
-  chipGroup('dytDurGroup',   v => { dytDur   = +v; });
-
-  /* ── toggle ── */
-  document.getElementById('dytToggle').addEventListener('click', function(){
-    const body = document.getElementById('dytBody');
-    const open = body.classList.toggle('open');
-    this.textContent = open ? '收起' : '展开';
-  });
-
-  /* ─── SLIDE DATA BUILDER ─── */
-  function buildSlides(){
-    const today = new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit'});
-    const hotItems = NEWS.filter(i=>i.hot).slice(0, dytCount);
-    const slides = [];
-
-    /* intro slide */
-    slides.push({
-      type:'intro',
-      title:'🤖 AI 日报',
-      subtitle: today,
-      footer:'每日智能资讯汇总'
-    });
-
-    /* one slide per hot item */
-    hotItems.forEach((item,i) => {
-      slides.push({
-        type:'item',
-        rank: i+1,
-        cat: item.cat,
-        title: item.title,
-        summary: item.summary,
-        source: item.source
-      });
-    });
-
-    /* outro */
-    slides.push({
-      type:'outro',
-      title:'更多资讯',
-      subtitle:'访问 AI DAILY 汇总站',
-      footer:'#AI日报 #人工智能 #抖音'
-    });
-
-    return slides;
-  }
-
-  /* ─── TEXT WRAP UTIL ─── */
-  function wrapText(ctx, text, x, y, maxW, lineH){
-    const words = text.split('');
-    let line = '', lines = [];
-    for(const ch of words){
-      const test = line + ch;
-      if(ctx.measureText(test).width > maxW && line){
-        lines.push(line); line = ch;
-      } else { line = test; }
-    }
-    if(line) lines.push(line);
-    lines.forEach((l,i) => ctx.fillText(l, x, y + i*lineH));
-    return lines.length;
-  }
-
-  /* ─── CANVAS FRAME RENDERER ─── */
-  const CAT_COLORS_HEX = {
-    news:'#7dd3fc', tools:'#86efac', research:'#c4b5fd',
-    industry:'#fcd34d', safety:'#fca5a5'
-  };
-  const CAT_LABELS = {
-    news:'行业动态', tools:'AI 工具', research:'研究前沿',
-    industry:'商业应用', safety:'安全与伦理'
-  };
-
-  function drawFrame(ctx, W, H, slide, progress){
-    /* ── background ── */
-    const grad = ctx.createLinearGradient(0,0,W,H);
-    grad.addColorStop(0,'#0f1118');
-    grad.addColorStop(1,'#1a1d27');
-    ctx.fillStyle = grad;
-    ctx.fillRect(0,0,W,H);
-
-    /* ── animated accent stripe (top) ── */
-    const stripeY = 0;
-    const stripeH = 6;
-    const sg = ctx.createLinearGradient(0,0,W,0);
-    sg.addColorStop(0,'#7dd3fc');
-    sg.addColorStop(.5,'#fb7185');
-    sg.addColorStop(1,'#c4b5fd');
-    ctx.fillStyle = sg;
-    ctx.fillRect(0,stripeY,W,stripeH);
-
-    /* ── subtle grid dots ── */
-    ctx.fillStyle = 'rgba(255,255,255,0.035)';
-    for(let gx=30; gx<W; gx+=36){
-      for(let gy=40; gy<H; gy+=36){
-        ctx.beginPath(); ctx.arc(gx,gy,1.5,0,Math.PI*2); ctx.fill();
-      }
-    }
-
-    if(slide.type === 'intro' || slide.type === 'outro'){
-      drawIntroOutro(ctx,W,H,slide);
-    } else {
-      drawItemSlide(ctx,W,H,slide);
-    }
-
-    /* ── progress dots ── */
-    // handled outside
-  }
-
-  function drawIntroOutro(ctx,W,H,slide){
-    const cx = W/2;
-    /* big icon circle */
-    ctx.beginPath();
-    ctx.arc(cx, H*.38, 52, 0, Math.PI*2);
-    ctx.fillStyle = 'rgba(125,211,252,0.1)';
-    ctx.fill();
-    ctx.strokeStyle = '#7dd3fc';
-    ctx.lineWidth = 2;
-    ctx.stroke();
-
-    /* icon text */
-    ctx.fillStyle='#fff';
-    ctx.font = 'bold 36px sans-serif';
-    ctx.textAlign='center';
-    ctx.textBaseline='middle';
-    ctx.fillText(slide.type==='intro'?'🤖':'✨', cx, H*.38);
-
-    /* title */
-    ctx.fillStyle='#fff';
-    ctx.font = 'bold 26px "Noto Sans SC",sans-serif';
-    ctx.fillText(slide.title, cx, H*.52);
-
-    /* subtitle */
-    ctx.fillStyle='#7dd3fc';
-    ctx.font = '16px "Noto Sans SC",sans-serif';
-    ctx.fillText(slide.subtitle, cx, H*.58);
-
-    /* footer */
-    ctx.fillStyle='rgba(255,255,255,0.4)';
-    ctx.font = '13px "Noto Sans SC",sans-serif';
-    ctx.fillText(slide.footer, cx, H*.68);
-  }
-
-  function drawItemSlide(ctx,W,H,slide){
-    const pad = 28;
-    const color = CAT_COLORS_HEX[slide.cat] || '#7dd3fc';
-
-    /* rank badge */
-    ctx.beginPath();
-    ctx.arc(pad+24, 60, 24, 0, Math.PI*2);
-    ctx.fillStyle = color+'33';
-    ctx.fill();
-    ctx.strokeStyle = color;
-    ctx.lineWidth = 2;
-    ctx.stroke();
-    ctx.fillStyle='#fff';
-    ctx.font='bold 18px sans-serif';
-    ctx.textAlign='center';
-    ctx.textBaseline='middle';
-    ctx.fillText('#'+slide.rank, pad+24, 60);
-
-    /* category label */
-    const catLbl = CAT_LABELS[slide.cat]||slide.cat;
-    ctx.fillStyle = color;
-    ctx.font = 'bold 13px "Noto Sans SC",sans-serif';
-    ctx.textAlign = 'left';
-    ctx.fillText(catLbl, pad+58, 64);
-
-    /* accent line under rank row */
-    ctx.fillStyle = color;
-    ctx.fillRect(pad, 94, W-pad*2, 2);
-
-    /* title */
-    ctx.fillStyle='#fff';
-    ctx.font='bold 21px "Noto Sans SC",sans-serif';
-    ctx.textBaseline='top';
-    const tLines = wrapText(ctx, slide.title, pad, 116, W-pad*2, 30);
-
-    /* summary */
-    ctx.fillStyle='rgba(221,224,232,0.82)';
-    ctx.font='15px "Noto Sans SC",sans-serif';
-    const sumTop = 116 + tLines*30 + 18;
-    wrapText(ctx, slide.summary, pad, sumTop, W-pad*2, 24);
-
-    /* source tag at bottom */
-    const srcY = H - 72;
-    ctx.fillStyle='rgba(255,255,255,0.15)';
-    const srcTxt = '来源：'+slide.source;
-    ctx.font='12px "Noto Sans SC",sans-serif';
-    const srcW = ctx.measureText(srcTxt).width + 20;
-    roundRect(ctx, pad, srcY, srcW, 28, 6);
-    ctx.fill();
-    ctx.fillStyle='rgba(255,255,255,0.5)';
-    ctx.textBaseline='middle';
-    ctx.fillText(srcTxt, pad+10, srcY+14);
-  }
-
-  function roundRect(ctx,x,y,w,h,r){
-    ctx.beginPath();
-    ctx.moveTo(x+r,y);
-    ctx.lineTo(x+w-r,y);
-    ctx.quadraticCurveTo(x+w,y,x+w,y+r);
-    ctx.lineTo(x+w,y+h-r);
-    ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
-    ctx.lineTo(x+r,y+h);
-    ctx.quadraticCurveTo(x,y+h,x,y+h-r);
-    ctx.lineTo(x,y+r);
-    ctx.quadraticCurveTo(x,y,x+r,y);
-    ctx.closePath();
-  }
-
-  /* ─── PROGRESS DOTS (slide indicators) ─── */
-  function drawProgressDots(ctx,W,H,slides,currentIdx){
-    const total = slides.length;
-    const dotR = 4;
-    const gap  = 10;
-    const totalW = total*(dotR*2) + (total-1)*gap;
-    let startX = (W - totalW)/2;
-    const dotY = H - 24;
-    slides.forEach((_,i) => {
-      ctx.beginPath();
-      ctx.arc(startX + dotR, dotY, dotR, 0, Math.PI*2);
-      ctx.fillStyle = i===currentIdx ? '#fb7185' : 'rgba(255,255,255,0.2)';
-      ctx.fill();
-      startX += dotR*2 + gap;
-    });
-  }
-
-  /* ─── RECORDING + PLAYBACK STATE ─── */
-  let slides        = [];
-  let videoBlob     = null;
-  let videoURL      = null;
-  let isPlaying     = false;
-  let rafId         = null;
-  let playStartTime = 0;
-  let playElapsed   = 0;
-
-  const canvas    = document.getElementById('dytCanvas');
-  const ctx       = canvas.getContext('2d');
-  const genBtn    = document.getElementById('dytGenBtn');
-  const genWrap   = document.getElementById('dytGenerating');
-  const genStatus = document.getElementById('dytGenStatus');
-  const genPct    = document.getElementById('dytGenPct');
-  const prevWrap  = document.getElementById('dytPreviewWrap');
-  const progFill  = document.getElementById('dytProgressFill');
-  const playBtn   = document.getElementById('dytPlayBtn');
-  const dlBtn     = document.getElementById('dytDlBtn');
-  const cpBtn     = document.getElementById('dytCpBtn');
-
-  /* ─── GENERATE ─── */
-  genBtn.addEventListener('click', async function(){
-    genBtn.disabled = true;
-    prevWrap.classList.remove('show');
-    genWrap.classList.add('show');
-    genPct.textContent   = '0%';
-    genStatus.textContent = '正在生成视频…';
-
-    slides = buildSlides();
-    const W = 1080, H = 1920;
-
-    /* ── off-screen canvas ── */
-    const offscreen = document.createElement('canvas');
-    offscreen.width  = W;
-    offscreen.height = H;
-    const octx = offscreen.getContext('2d');
-
-    /* draw the very first frame BEFORE captureStream — required by some browsers */
-    drawFrame(octx, W, H, slides[0], 0);
-    drawProgressDots(octx, W, H, slides, 0);
-
-    /* ── pick best supported mime ── */
-    const mimeTypes = [
-      'video/webm;codecs=vp9',
-      'video/webm;codecs=vp8',
-      'video/webm',
-      'video/mp4'
-    ];
-    const mime = mimeTypes.find(m => MediaRecorder.isTypeSupported(m)) || 'video/webm';
-
-    /* ── start stream + recorder ── */
-    const stream   = offscreen.captureStream(30);
-    const recorder = new MediaRecorder(stream, { mimeType: mime });
-    const chunks   = [];
-    recorder.ondataavailable = e => { if(e.data && e.data.size) chunks.push(e.data); };
-
-    const totalDuration = slides.length * dytDur; /* seconds */
-    const totalMs       = totalDuration * 1000;
-
-    await new Promise(resolve => {
-      recorder.onstop = () => {
-        videoBlob = new Blob(chunks, { type: mime });
-        if(videoURL) URL.revokeObjectURL(videoURL);
-        videoURL = URL.createObjectURL(videoBlob);
-        resolve();
-      };
-
-      /* start with timeslice so ondataavailable fires periodically */
-      recorder.start(200);
-
-      const startMs = performance.now();
-
-      function tick(){
-        const elapsed = performance.now() - startMs;
-
-        if(elapsed >= totalMs){
-          /* draw final frame then stop after a tiny delay so it gets captured */
-          drawFrame(octx, W, H, slides[slides.length-1], 1);
-          drawProgressDots(octx, W, H, slides, slides.length-1);
-          setTimeout(() => recorder.stop(), 100);
-          return;
-        }
-
-        const pct      = elapsed / totalMs;
-        const slideIdx = Math.min(Math.floor(elapsed / (dytDur*1000)), slides.length-1);
-
-        drawFrame(octx, W, H, slides[slideIdx], pct);
-        drawProgressDots(octx, W, H, slides, slideIdx);
-
-        /* UI feedback */
-        genPct.textContent    = Math.round(pct*100)+'%';
-        genStatus.textContent = `正在渲染第 ${slideIdx+1}/${slides.length} 幅…`;
-
-        requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    });
-
-    /* ── done → show preview ── */
-    genWrap.classList.remove('show');
-    prevWrap.classList.add('show');
-    genBtn.disabled       = false;
-    genPct.textContent    = '0%';
-    genStatus.textContent = '正在生成视频…';
-
-    canvas.width  = W;
-    canvas.height = H;
-    playElapsed = 0;
-    isPlaying   = false;
-    renderPreviewFrame(0);
-  });
-
-  /* ─── PREVIEW PLAYBACK ─── */
-  function renderPreviewFrame(elapsedSec){
-    if(!slides.length) return;
-    const slideIdx = Math.min(Math.floor(elapsedSec / dytDur), slides.length-1);
-    drawFrame(ctx, 1080, 1920, slides[slideIdx], 0);
-    drawProgressDots(ctx, 1080, 1920, slides, slideIdx);
-
-    const totalDur = slides.length * dytDur;
-    progFill.style.width = Math.min((elapsedSec/totalDur)*100,100)+'%';
-  }
-
-  function startPlay(){
-    isPlaying     = true;
-    playStartTime = performance.now();
-    const totalDur = slides.length * dytDur;
-
-    playBtn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" fill="#fff"/><rect x="14" y="4" width="4" height="16" fill="#fff"/></svg>';
-    playBtn.classList.add('playing');
-
-    function loop(){
-      if(!isPlaying) return;
-      const nowSec = playElapsed + (performance.now()-playStartTime)/1000;
-      if(nowSec >= totalDur){
-        playElapsed     = 0;
-        playStartTime   = performance.now();
-        renderPreviewFrame(0);
-        rafId = requestAnimationFrame(loop);
-        return;
-      }
-      renderPreviewFrame(nowSec);
-      rafId = requestAnimationFrame(loop);
-    }
-    rafId = requestAnimationFrame(loop);
-  }
-
-  function pausePlay(){
-    isPlaying = false;
-    if(rafId) cancelAnimationFrame(rafId);
-    playElapsed += (performance.now()-playStartTime)/1000;
-
-    playBtn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" fill="#fff"/></svg>';
-    playBtn.classList.remove('playing');
-  }
-
-  playBtn.addEventListener('click', () => { isPlaying ? pausePlay() : startPlay(); });
-
-  /* ─── DOWNLOAD ─── */
-  dlBtn.addEventListener('click', function(){
-    if(!videoBlob) return;
-    const ext = videoBlob.type.includes('mp4') ? 'mp4' : 'webm';
-    const a   = document.createElement('a');
-    a.href     = videoURL;
-    a.download = 'AI日报_'+new Date().toISOString().slice(0,10)+'.'+ext;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-
-    this.textContent = '✓ 已下载！';
-    this.classList.add('done');
-    setTimeout(() => { this.textContent='⬇️ 下载视频'; this.classList.remove('done'); }, 2200);
-  });
-
-  /* ─── COPY SCRIPT ─── */
-  cpBtn.addEventListener('click', function(){
-    const today = new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit'});
-    let script  = `🎬 AI日报 抖音视频脚本 | ${today}\n`;
-    script += `━━━━━━━━━━━━━━━━━━━━\n\n`;
-    script += `【封面】AI 日报 – 每日智能资讯汇总\n\n`;
-    NEWS.filter(i=>i.hot).slice(0,dytCount).forEach((item,i) => {
-      script += `【第${i+1}页 – ${CAT_LABELS[item.cat]||item.cat}】\n`;
-      script += `标题：${item.title}\n`;
-      script += `内容：${item.summary}\n`;
-      script += `来源：${item.source}\n\n`;
-    });
-    script += `【结尾】更多资讯访问 AI DAILY 汇总站\n`;
-    script += `#AI日报 #人工智能 #抖音`;
-
-    navigator.clipboard.writeText(script).then(() => {
-      this.textContent = '✓ 已复制！';
-      this.classList.add('done');
-      setTimeout(() => { this.textContent='📋 复制脚本'; this.classList.remove('done'); }, 2200);
-    });
-  });
-
-})();
-
-/* ─── INIT ───────────────────────────────────────────── */
-(async function init() {
-  // 1. 加载新闻数据
-  await loadNewsData();
-  
-  // 2. 渲染页面
+/* ─── INITIALIZATION ─────────────────────────────────── */
+async function init() {
+  await fetchNewsData();
   renderAll();
-
-  // 3. 启动时间更新
-  function updateTime(){
-    const now = new Date();
-    const m = String(now.getMonth()+1).padStart(2,'0');
-    const d = String(now.getDate()).padStart(2,'0');
-    const h = String(now.getHours()).padStart(2,'0');
-    const mi = String(now.getMinutes()).padStart(2,'0');
-    document.getElementById('liveTime').textContent = `已更新 ${m}月${d}日 ${h}:${mi}`;
-  }
-  updateTime();
-  setInterval(updateTime, 30000);
   
-  console.log('✅ AI Daily 初始化完成');
-})();
+  // 定时检查更新
+  setInterval(checkForUpdates, CONFIG.REFRESH_INTERVAL);
+  
+  // 页面可见时检查
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) checkForUpdates();
+  });
+}
+
+init();
 </script>
 </body>
 </html>
