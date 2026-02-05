@@ -1,0 +1,35 @@
+name: Update AI News Daily
+
+on:
+  schedule:
+    # 每天早上 8 点 UTC 运行（北京时间下午 4 点）
+    - cron: '0 8 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        pip install requests beautifulsoup4 feedparser
+        
+    - name: Update news data
+      run: python update_news.py
+      
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add news_data.json
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update news data $(date +%Y-%m-%d)"
+        git push
