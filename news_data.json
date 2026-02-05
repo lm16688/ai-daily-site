@@ -1,0 +1,401 @@
+{
+  "last_update": "2026-02-05T14:17:48.038388",
+  "total_count": 30,
+  "articles": [
+    {
+      "title": "From guardrails to governance: A CEO’s guide for securing agentic systems",
+      "summary": "The previous article in this series, “Rules fail at the prompt, succeed at the boundary,” focused on the first AI-orchestrated espionage campaign and the failure of prompt-level control. This artic...",
+      "source": "Artificial intelligence – MIT Technology Review",
+      "date": "2026-02-04",
+      "url": "https://www.technologyreview.com/2026/02/04/1131014/from-guardrails-to-governance-a-ceos-guide-for-securing-agentic-systems/",
+      "cat": "safety",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 1
+    },
+    {
+      "title": "AI Expo 2026 Day 1: Governance and data readiness enable the agentic enterprise",
+      "summary": "While the prospect of AI acting as a digital co-worker dominated the day one agenda at the co-located AI &#38; Big Data Expo and Intelligent Automation Conference, the technical sessions focused on...",
+      "source": "AI News",
+      "date": "2026-02-04",
+      "url": "https://www.artificialintelligence-news.com/news/ai-expo-2026-day-1-governance-data-readiness-enable-agentic-enterprise/",
+      "cat": "industry",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 2
+    },
+    {
+      "title": "From blogosphere to the AI & Big Data Expo: Rackspace and operational AI",
+      "summary": "In a recent blog output, Rackspace refers to the bottlenecks familiar to many readers: messy data, unclear ownership, governance gaps, and the cost of running models once they become part of produc...",
+      "source": "AI News",
+      "date": "2026-02-04",
+      "url": "https://www.artificialintelligence-news.com/news/combing-the-rackspace-blogfiles-for-operational-ai-pointers/",
+      "cat": "research",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 3
+    },
+    {
+      "title": "How Cisco builds smart systems for the AI era",
+      "summary": "Among the big players in technology, Cisco is one of the sector&#8217;s leaders that&#8217;s advancing operational deployments of AI internally to its own operations, and the tools it sells to its ...",
+      "source": "AI News",
+      "date": "2026-02-04",
+      "url": "https://www.artificialintelligence-news.com/news/how-cisco-builds-smart-systems-for-the-ai-era/",
+      "cat": "tools",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 4
+    },
+    {
+      "title": "Ronnie Sheth, CEO, SENEN Group: Why now is the time for enterprise AI to ‘get practical’",
+      "summary": "Before you set sail on your AI journey, always check the state of your data – because if there is one thing likely to sink your ship, it is data quality. Gartner estimates that poor data quality co...",
+      "source": "AI News",
+      "date": "2026-02-03",
+      "url": "https://www.artificialintelligence-news.com/news/ronnie-sheth-ceo-senen-group-why-now-is-the-time-for-enterprise-ai-to-get-practical/",
+      "cat": "industry",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 5
+    },
+    {
+      "title": "Apptio: Why scaling intelligent automation requires financial rigour",
+      "summary": "Greg Holmes, Field CTO for EMEA at Apptio, an IBM company, argues that successfully scaling intelligent automation requires financial rigour. The &#8220;build it and they will come&#8221; model of ...",
+      "source": "AI News",
+      "date": "2026-02-03",
+      "url": "https://www.artificialintelligence-news.com/news/apptio-why-scaling-intelligent-automation-requires-financial-rigour/",
+      "cat": "tools",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 6
+    },
+    {
+      "title": "FedEx tests how far AI can go in tracking and returns management",
+      "summary": "FedEx is using AI to change how package tracking and returns work for large enterprise shippers. For companies moving high volumes of goods, tracking no longer ends when a package leaves the wareho...",
+      "source": "AI News",
+      "date": "2026-02-03",
+      "url": "https://www.artificialintelligence-news.com/news/fedex-tests-how-far-ai-can-go-in-tracking-and-returns-management/",
+      "cat": "industry",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 7
+    },
+    {
+      "title": "What we’ve been getting wrong about AI’s truth crisis",
+      "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first,&#160;sign up here. What would it take to convince you that the era of tru...",
+      "source": "Artificial intelligence – MIT Technology Review",
+      "date": "2026-02-02",
+      "url": "https://www.technologyreview.com/2026/02/02/1132068/what-weve-been-getting-wrong-about-ais-truth-crisis/",
+      "cat": "tools",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 8
+    },
+    {
+      "title": "The crucial first step for designing a successful enterprise AI system",
+      "summary": "Many organizations rushed into generative AI, only to see pilots fail to deliver value. Now, companies want measurable outcomes—but how do you design for success? At Mistral AI, we partner with glo...",
+      "source": "Artificial intelligence – MIT Technology Review",
+      "date": "2026-02-02",
+      "url": "https://www.technologyreview.com/2026/02/02/1131822/the-crucial-first-step-for-designing-a-successful-enterprise-ai-system/",
+      "cat": "industry",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 9
+    },
+    {
+      "title": "How SAP is modernising HMRC’s tax infrastructure with AI",
+      "summary": "HMRC has selected SAP to overhaul its core revenue systems and place AI at the centre of the UK’s tax administration strategy. The contract represents a broader shift in how public sector bodies ap...",
+      "source": "AI News",
+      "date": "2026-02-02",
+      "url": "https://www.artificialintelligence-news.com/news/how-sap-modernising-hmrc-tax-infrastructure-with-ai/",
+      "cat": "industry",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 10
+    },
+    {
+      "title": "Inside the marketplace powering bespoke AI deepfakes of real women",
+      "summary": "Civitai—an online marketplace for buying and selling AI-generated content, backed by the venture capital firm Andreessen Horowitz—is letting users buy custom instruction files for generating celebr...",
+      "source": "Artificial intelligence – MIT Technology Review",
+      "date": "2026-01-30",
+      "url": "https://www.technologyreview.com/2026/01/30/1131945/inside-the-marketplace-powering-bespoke-ai-deepfakes-of-real-women/",
+      "cat": "news",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 11
+    },
+    {
+      "title": "The AI Hype Index: Grok makes porn, and Claude Code nails your job",
+      "summary": "Everyone is panicking because AI is very bad; everyone is panicking because AI is very good. It’s just that you never know which one you’re going to get. Grok is a pornography machine. Claude Code ...",
+      "source": "Artificial intelligence – MIT Technology Review",
+      "date": "2026-01-29",
+      "url": "https://www.technologyreview.com/2026/01/29/1131787/the-ai-hype-index-grok-makes-porn-claude-code-nails-your-job/",
+      "cat": "tools",
+      "hot": false,
+      "tags": [
+        "Claude"
+      ],
+      "id": 12
+    },
+    {
+      "title": "Meta bought 1 GW of solar this week",
+      "summary": "The social media company inked three deals in the U.S. to power its data centers and offset its carbon footprint.",
+      "source": "Artificial Intelligence (AI) | TechCrunch",
+      "date": "2025-10-31",
+      "url": "https://techcrunch.com/2025/10/31/meta-bought-1-gw-of-solar-this-week/",
+      "cat": "news",
+      "hot": false,
+      "tags": [
+        "Meta"
+      ],
+      "id": 13
+    },
+    {
+      "title": "How one AI startup is helping rice farmers battle climate change",
+      "summary": "Mitti Labs is working with The Nature Conservancy to expand the use of climate-friendly rice farming practices in India. The startup uses its AI to verify reductions in methane emissions.",
+      "source": "Artificial Intelligence (AI) | TechCrunch",
+      "date": "2025-08-26",
+      "url": "https://techcrunch.com/2025/08/26/how-one-ai-startup-is-helping-rice-farmers-battle-climate-change/",
+      "cat": "industry",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 14
+    },
+    {
+      "title": "Harvard dropouts to launch ‘always on’ AI smart glasses that listen and record every conversation",
+      "summary": "After developing a facial-recognition app for Meta’s Ray-Ban glasses and doxing random people, two former Harvard students are now launching a startup that makes smart glasses with an always-on mic...",
+      "source": "Artificial Intelligence (AI) | TechCrunch",
+      "date": "2025-08-20",
+      "url": "https://techcrunch.com/2025/08/20/harvard-dropouts-to-launch-always-on-ai-smart-glasses-that-listen-and-record-every-conversation/",
+      "cat": "news",
+      "hot": false,
+      "tags": [
+        "Meta"
+      ],
+      "id": 15
+    },
+    {
+      "title": "Meta to add 100MW of solar power from US gear",
+      "summary": "The social media company is adding another tranche of solar to power a new AI data center in South Carolina.",
+      "source": "Artificial Intelligence (AI) | TechCrunch",
+      "date": "2025-08-20",
+      "url": "https://techcrunch.com/2025/08/20/meta-to-add-100-mw-of-solar-power-from-u-s-gear/",
+      "cat": "news",
+      "hot": false,
+      "tags": [
+        "Meta"
+      ],
+      "id": 16
+    },
+    {
+      "title": "Perplexity accused of scraping websites that explicitly blocked AI scraping",
+      "summary": "Internet giant Cloudflare says it detected Perplexity crawling and scraping websites, even after customers had added technical blocks telling Perplexity not to scrape their pages.",
+      "source": "Artificial Intelligence (AI) | TechCrunch",
+      "date": "2025-08-04",
+      "url": "https://techcrunch.com/2025/08/04/perplexity-accused-of-scraping-websites-that-explicitly-blocked-ai-scraping/",
+      "cat": "news",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 17
+    },
+    {
+      "title": "Obvio’s stop sign cameras use AI to root out unsafe drivers",
+      "summary": "American streets are incredibly dangerous for pedestrians. A San Carlos, California-based startup called Obvio thinks it can change that by installing cameras at stop signs -- a solution the founde...",
+      "source": "Artificial Intelligence (AI) | TechCrunch",
+      "date": "2025-06-04",
+      "url": "https://techcrunch.com/2025/06/04/obvios-stop-sign-cameras-use-ai-to-root-out-unsafe-drivers/",
+      "cat": "industry",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 18
+    },
+    {
+      "title": "Gridcare thinks more than 100 GW of data center capacity is hiding in the grid",
+      "summary": "Gridcare raised $13.3 million for its data platform that finds underutilized capacity on the electrical grid.",
+      "source": "Artificial Intelligence (AI) | TechCrunch",
+      "date": "2025-05-27",
+      "url": "https://techcrunch.com/2025/05/27/gridcare-thinks-more-than-100-gw-of-data-center-capacity-is-hiding-in-the-grid/",
+      "cat": "tools",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 19
+    },
+    {
+      "title": "Meta adds another 650 MW of solar power to its AI push",
+      "summary": "The company already has more than 12 gigawatts of capacity in its renewable power portfolio.",
+      "source": "Artificial Intelligence (AI) | TechCrunch",
+      "date": "2025-05-22",
+      "url": "https://techcrunch.com/2025/05/22/meta-adds-another-650-mw-of-solar-power-to-its-ai-push/",
+      "cat": "news",
+      "hot": false,
+      "tags": [
+        "Meta"
+      ],
+      "id": 20
+    },
+    {
+      "title": "This is the most misunderstood graph in AI",
+      "summary": "MIT Technology Review Explains: Let our writers untangle the complex, messy world of technology to help you understand what’s coming next. You can read more from the series here. Every time OpenAI,...",
+      "source": "Artificial intelligence – MIT Technology Review",
+      "date": "2026-02-05",
+      "url": "https://www.technologyreview.com/2026/02/05/1132254/this-is-the-most-misunderstood-graph-in-ai/",
+      "cat": "research",
+      "hot": true,
+      "tags": [
+        "OpenAI"
+      ],
+      "id": 21
+    },
+    {
+      "title": "Microsoft unveils method to detect sleeper agent backdoors",
+      "summary": "Researchers from Microsoft have unveiled a scanning method to identify poisoned models without knowing the trigger or intended outcome. Organisations integrating open-weight large language models (...",
+      "source": "AI News",
+      "date": "2026-02-05",
+      "url": "https://www.artificialintelligence-news.com/news/microsoft-unveils-method-detect-sleeper-agent-backdoors/",
+      "cat": "research",
+      "hot": true,
+      "tags": [
+        "Microsoft"
+      ],
+      "id": 22
+    },
+    {
+      "title": "OpenAI’s enterprise push: The hidden story behind AI’s sales race",
+      "summary": "As OpenAI races toward its ambitious US$100 billion revenue target by 2027, the ChatGPT maker is reportedly building an army of AI consultants to bridge the gap between cutting-edge technology and ...",
+      "source": "AI News",
+      "date": "2026-02-05",
+      "url": "https://www.artificialintelligence-news.com/news/openai-ai-consultants-enterprise-adoption-challenges/",
+      "cat": "industry",
+      "hot": true,
+      "tags": [
+        "ChatGPT",
+        "OpenAI"
+      ],
+      "id": 23
+    },
+    {
+      "title": "Klarna backs Google UCP to power AI agent payments",
+      "summary": "Klarna aims to address the lack of interoperability between conversational AI agents and backend payment systems by backing Google’s Universal Commerce Protocol (UCP), an open standard designed to ...",
+      "source": "AI News",
+      "date": "2026-02-02",
+      "url": "https://www.artificialintelligence-news.com/news/klarna-backs-google-ucp-power-ai-agent-payments/",
+      "cat": "news",
+      "hot": true,
+      "tags": [
+        "Google"
+      ],
+      "id": 24
+    },
+    {
+      "title": "DHS is using Google and Adobe AI to make videos",
+      "summary": "The US Department of Homeland Security is using AI video generators from Google and Adobe to make and edit content shared with the public, a new document reveals. It comes as immigration agencies h...",
+      "source": "Artificial intelligence – MIT Technology Review",
+      "date": "2026-01-29",
+      "url": "https://www.technologyreview.com/2026/01/29/1131938/dhs-is-using-google-and-adobe-ai-to-make-videos/",
+      "cat": "news",
+      "hot": true,
+      "tags": [
+        "Google"
+      ],
+      "id": 25
+    },
+    {
+      "title": "What AI “remembers” about you is privacy’s next frontier",
+      "summary": "The ability to remember you and your preferences is rapidly becoming a big selling point for AI chatbots and agents.&#160; Earlier this month, Google announced Personal Intelligence, a new way for ...",
+      "source": "Artificial intelligence – MIT Technology Review",
+      "date": "2026-01-28",
+      "url": "https://www.technologyreview.com/2026/01/28/1131835/what-ai-remembers-about-you-is-privacys-next-frontier/",
+      "cat": "news",
+      "hot": true,
+      "tags": [
+        "Google"
+      ],
+      "id": 26
+    },
+    {
+      "title": "Rules fail at the prompt, succeed at the boundary",
+      "summary": "From the Gemini Calendar prompt-injection attack of 2026 to the September 2025 state-sponsored hack using Anthropic’s Claude code as an automated intrusion engine, the coercion of human-in-the-loop...",
+      "source": "Artificial intelligence – MIT Technology Review",
+      "date": "2026-01-28",
+      "url": "https://www.technologyreview.com/2026/01/28/1131003/rules-fail-at-the-prompt-succeed-at-the-boundary/",
+      "cat": "tools",
+      "hot": true,
+      "tags": [
+        "Anthropic",
+        "Claude"
+      ],
+      "id": 27
+    },
+    {
+      "title": "OpenAI’s latest product lets you vibe code science",
+      "summary": "OpenAI just revealed what its new in-house team, OpenAI for Science, has been up to. The firm has released a free LLM-powered tool for scientists called Prism, which embeds ChatGPT in a text editor...",
+      "source": "Artificial intelligence – MIT Technology Review",
+      "date": "2026-01-27",
+      "url": "https://www.technologyreview.com/2026/01/27/1131793/openais-latest-product-lets-you-vibe-code-science/",
+      "cat": "tools",
+      "hot": true,
+      "tags": [
+        "ChatGPT",
+        "OpenAI",
+        "LLM"
+      ],
+      "id": 28
+    },
+    {
+      "title": "Converge Bio raises $25M, backed by Bessemer and execs from Meta, OpenAI, Wiz",
+      "summary": "AI drug discovery startup Converge Bio raised $25 million in a Series A led by Bessemer Venture Partners, with additional backing from executives at Meta, OpenAI, and Wiz.",
+      "source": "Artificial Intelligence (AI) | TechCrunch",
+      "date": "2026-01-13",
+      "url": "https://techcrunch.com/2026/01/13/ai-drug-discovery-startup-converge-bio-pulls-in-25m-from-bessemer-and-execs-from-meta-openai-and-wiz/",
+      "cat": "research",
+      "hot": true,
+      "tags": [
+        "OpenAI",
+        "Meta"
+      ],
+      "id": 29
+    },
+    {
+      "title": "Breakneck data center growth challenges Microsoft’s sustainability goals",
+      "summary": "Microsoft's sustainability goals are imperiled by its push into AI and cloud services.",
+      "source": "Artificial Intelligence (AI) | TechCrunch",
+      "date": "2025-06-02",
+      "url": "https://techcrunch.com/2025/06/02/breakneck-data-center-growth-challenges-microsofts-sustainability-goals/",
+      "cat": "tools",
+      "hot": true,
+      "tags": [
+        "Microsoft"
+      ],
+      "id": 30
+    }
+  ]
+}
