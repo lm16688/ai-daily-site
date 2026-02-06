@@ -1,7 +1,20 @@
 {
-  "last_update": "2026-02-05T14:17:48.038388",
+  "last_update": "2026-02-06T08:40:57.148265",
   "total_count": 30,
   "articles": [
+    {
+      "title": "AI Expo 2026 Day 2: Moving experimental pilots to AI production",
+      "summary": "The second day of the co-located AI &#38; Big Data Expo and Digital Transformation Week in London showed a market in a clear transition. Early excitement over generative models is fading. Enterpris...",
+      "source": "AI News",
+      "date": "2026-02-05",
+      "url": "https://www.artificialintelligence-news.com/news/ai-expo-2026-day-2-moving-experimental-pilots-ai-production/",
+      "cat": "news",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 1
+    },
     {
       "title": "From guardrails to governance: A CEO’s guide for securing agentic systems",
       "summary": "The previous article in this series, “Rules fail at the prompt, succeed at the boundary,” focused on the first AI-orchestrated espionage campaign and the failure of prompt-level control. This artic...",
@@ -13,7 +26,7 @@
       "tags": [
         "AI"
       ],
-      "id": 1
+      "id": 2
     },
     {
       "title": "AI Expo 2026 Day 1: Governance and data readiness enable the agentic enterprise",
@@ -26,7 +39,7 @@
       "tags": [
         "AI"
       ],
-      "id": 2
+      "id": 3
     },
     {
       "title": "From blogosphere to the AI & Big Data Expo: Rackspace and operational AI",
@@ -39,7 +52,7 @@
       "tags": [
         "AI"
       ],
-      "id": 3
+      "id": 4
     },
     {
       "title": "How Cisco builds smart systems for the AI era",
@@ -52,7 +65,7 @@
       "tags": [
         "AI"
       ],
-      "id": 4
+      "id": 5
     },
     {
       "title": "Ronnie Sheth, CEO, SENEN Group: Why now is the time for enterprise AI to ‘get practical’",
@@ -65,7 +78,7 @@
       "tags": [
         "AI"
       ],
-      "id": 5
+      "id": 6
     },
     {
       "title": "Apptio: Why scaling intelligent automation requires financial rigour",
@@ -78,7 +91,7 @@
       "tags": [
         "AI"
       ],
-      "id": 6
+      "id": 7
     },
     {
       "title": "FedEx tests how far AI can go in tracking and returns management",
@@ -91,7 +104,7 @@
       "tags": [
         "AI"
       ],
-      "id": 7
+      "id": 8
     },
     {
       "title": "What we’ve been getting wrong about AI’s truth crisis",
@@ -104,7 +117,7 @@
       "tags": [
         "AI"
       ],
-      "id": 8
+      "id": 9
     },
     {
       "title": "The crucial first step for designing a successful enterprise AI system",
@@ -112,19 +125,6 @@
       "source": "Artificial intelligence – MIT Technology Review",
       "date": "2026-02-02",
       "url": "https://www.technologyreview.com/2026/02/02/1131822/the-crucial-first-step-for-designing-a-successful-enterprise-ai-system/",
-      "cat": "industry",
-      "hot": false,
-      "tags": [
-        "AI"
-      ],
-      "id": 9
-    },
-    {
-      "title": "How SAP is modernising HMRC’s tax infrastructure with AI",
-      "summary": "HMRC has selected SAP to overhaul its core revenue systems and place AI at the centre of the UK’s tax administration strategy. The contract represents a broader shift in how public sector bodies ap...",
-      "source": "AI News",
-      "date": "2026-02-02",
-      "url": "https://www.artificialintelligence-news.com/news/how-sap-modernising-hmrc-tax-infrastructure-with-ai/",
       "cat": "industry",
       "hot": false,
       "tags": [
