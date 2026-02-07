@@ -1,7 +1,72 @@
 {
-  "last_update": "2026-02-06T08:40:57.148265",
+  "last_update": "2026-02-07T08:31:21.479704",
   "total_count": 30,
   "articles": [
+    {
+      "title": "Moltbook was peak AI theater",
+      "summary": "For a few days this week the hottest new hangout on the internet was a vibe-coded Reddit clone called Moltbook, which billed itself as a social network for bots. As the website’s tagline puts it: “...",
+      "source": "Artificial intelligence – MIT Technology Review",
+      "date": "2026-02-06",
+      "url": "https://www.technologyreview.com/2026/02/06/1132448/moltbook-was-peak-ai-theater/",
+      "cat": "news",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 1
+    },
+    {
+      "title": "How separating logic and search boosts AI agent scalability",
+      "summary": "Separating logic from inference improves AI agent scalability by decoupling core workflows from execution strategies. The transition from generative AI prototypes to production-grade agents introdu...",
+      "source": "AI News",
+      "date": "2026-02-06",
+      "url": "https://www.artificialintelligence-news.com/news/how-separating-logic-and-search-boosts-ai-agent-scalability/",
+      "cat": "tools",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 2
+    },
+    {
+      "title": "Intuit, Uber, and State Farm trial AI agents inside enterprise workflows",
+      "summary": "The way large companies use artificial intelligence is changing. For years, AI in business meant experimenting with tools that could answer questions or help with small tasks. Now, some big enterpr...",
+      "source": "AI News",
+      "date": "2026-02-06",
+      "url": "https://www.artificialintelligence-news.com/news/intuit-uber-and-state-farm-trial-ai-agents-inside-enterprise-workflows/",
+      "cat": "industry",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 3
+    },
+    {
+      "title": "SuperCool review: Evaluating the reality of autonomous creation",
+      "summary": "In the current landscape of generative artificial intelligence, we have reached a saturation point with assistants. Most users are familiar with the routine. You prompt a tool, it provides a draft,...",
+      "source": "AI News",
+      "date": "2026-02-06",
+      "url": "https://www.artificialintelligence-news.com/news/supercool-review-evaluating-the-reality-of-autonomous-creation/",
+      "cat": "tools",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 4
+    },
+    {
+      "title": "Top 7 best AI penetration testing companies in 2026",
+      "summary": "Penetration testing has always existed to answer one practical concern: what actually happens when a motivated attacker targets a real system. For many years, that answer was produced through scope...",
+      "source": "AI News",
+      "date": "2026-02-06",
+      "url": "https://www.artificialintelligence-news.com/news/top-7-best-ai-penetration-testing-companies-in-2026/",
+      "cat": "tools",
+      "hot": false,
+      "tags": [
+        "AI"
+      ],
+      "id": 5
+    },
     {
       "title": "AI Expo 2026 Day 2: Moving experimental pilots to AI production",
       "summary": "The second day of the co-located AI &#38; Big Data Expo and Digital Transformation Week in London showed a market in a clear transition. Early excitement over generative models is fading. Enterpris...",
@@ -13,7 +78,7 @@
       "tags": [
         "AI"
       ],
-      "id": 1
+      "id": 6
     },
     {
       "title": "From guardrails to governance: A CEO’s guide for securing agentic systems",
@@ -26,7 +91,7 @@
       "tags": [
         "AI"
       ],
-      "id": 2
+      "id": 7
     },
     {
       "title": "AI Expo 2026 Day 1: Governance and data readiness enable the agentic enterprise",
@@ -39,7 +104,7 @@
       "tags": [
         "AI"
       ],
-      "id": 3
+      "id": 8
     },
     {
       "title": "From blogosphere to the AI & Big Data Expo: Rackspace and operational AI",
@@ -52,7 +117,7 @@
       "tags": [
         "AI"
       ],
-      "id": 4
+      "id": 9
     },
     {
       "title": "How Cisco builds smart systems for the AI era",
@@ -65,46 +130,7 @@
       "tags": [
         "AI"
       ],
-      "id": 5
-    },
-    {
-      "title": "Ronnie Sheth, CEO, SENEN Group: Why now is the time for enterprise AI to ‘get practical’",
-      "summary": "Before you set sail on your AI journey, always check the state of your data – because if there is one thing likely to sink your ship, it is data quality. Gartner estimates that poor data quality co...",
-      "source": "AI News",
-      "date": "2026-02-03",
-      "url": "https://www.artificialintelligence-news.com/news/ronnie-sheth-ceo-senen-group-why-now-is-the-time-for-enterprise-ai-to-get-practical/",
-      "cat": "industry",
-      "hot": false,
-      "tags": [
-        "AI"
-      ],
-      "id": 6
-    },
-    {
-      "title": "Apptio: Why scaling intelligent automation requires financial rigour",
-      "summary": "Greg Holmes, Field CTO for EMEA at Apptio, an IBM company, argues that successfully scaling intelligent automation requires financial rigour. The &#8220;build it and they will come&#8221; model of ...",
-      "source": "AI News",
-      "date": "2026-02-03",
-      "url": "https://www.artificialintelligence-news.com/news/apptio-why-scaling-intelligent-automation-requires-financial-rigour/",
-      "cat": "tools",
-      "hot": false,
-      "tags": [
-        "AI"
-      ],
-      "id": 7
-    },
-    {
-      "title": "FedEx tests how far AI can go in tracking and returns management",
-      "summary": "FedEx is using AI to change how package tracking and returns work for large enterprise shippers. For companies moving high volumes of goods, tracking no longer ends when a package leaves the wareho...",
-      "source": "AI News",
-      "date": "2026-02-03",
-      "url": "https://www.artificialintelligence-news.com/news/fedex-tests-how-far-ai-can-go-in-tracking-and-returns-management/",
-      "cat": "industry",
-      "hot": false,
-      "tags": [
-        "AI"
-      ],
-      "id": 8
+      "id": 10
     },
     {
       "title": "What we’ve been getting wrong about AI’s truth crisis",
@@ -117,7 +143,7 @@
       "tags": [
         "AI"
       ],
-      "id": 9
+      "id": 11
     },
     {
       "title": "The crucial first step for designing a successful enterprise AI system",
@@ -130,7 +156,7 @@
       "tags": [
         "AI"
       ],
-      "id": 10
+      "id": 12
     },
     {
       "title": "Inside the marketplace powering bespoke AI deepfakes of real women",
@@ -143,7 +169,7 @@
       "tags": [
         "AI"
       ],
-      "id": 11
+      "id": 13
     },
     {
       "title": "The AI Hype Index: Grok makes porn, and Claude Code nails your job",
@@ -156,7 +182,7 @@
       "tags": [
         "Claude"
       ],
-      "id": 12
+      "id": 14
     },
     {
       "title": "Meta bought 1 GW of solar this week",
@@ -169,7 +195,7 @@
       "tags": [
         "Meta"
       ],
-      "id": 13
+      "id": 15
     },
     {
       "title": "How one AI startup is helping rice farmers battle climate change",
@@ -182,7 +208,7 @@
       "tags": [
         "AI"
       ],
-      "id": 14
+      "id": 16
     },
     {
       "title": "Harvard dropouts to launch ‘always on’ AI smart glasses that listen and record every conversation",
@@ -195,7 +221,7 @@
       "tags": [
         "Meta"
       ],
-      "id": 15
+      "id": 17
     },
     {
       "title": "Meta to add 100MW of solar power from US gear",
@@ -208,7 +234,7 @@
       "tags": [
         "Meta"
       ],
-      "id": 16
+      "id": 18
     },
     {
       "title": "Perplexity accused of scraping websites that explicitly blocked AI scraping",
@@ -221,7 +247,7 @@
       "tags": [
         "AI"
       ],
-      "id": 17
+      "id": 19
     },
     {
       "title": "Obvio’s stop sign cameras use AI to root out unsafe drivers",
@@ -234,7 +260,7 @@
       "tags": [
         "AI"
       ],
-      "id": 18
+      "id": 20
     },
     {
       "title": "Gridcare thinks more than 100 GW of data center capacity is hiding in the grid",
@@ -247,7 +273,7 @@
       "tags": [
         "AI"
       ],
-      "id": 19
+      "id": 21
     },
     {
       "title": "Meta adds another 650 MW of solar power to its AI push",
@@ -260,7 +286,7 @@
       "tags": [
         "Meta"
       ],
-      "id": 20
+      "id": 22
     },
     {
       "title": "This is the most misunderstood graph in AI",
@@ -273,7 +299,7 @@
       "tags": [
         "OpenAI"
       ],
-      "id": 21
+      "id": 23
     },
     {
       "title": "Microsoft unveils method to detect sleeper agent backdoors",
@@ -286,7 +312,7 @@
       "tags": [
         "Microsoft"
       ],
-      "id": 22
+      "id": 24
     },
     {
       "title": "OpenAI’s enterprise push: The hidden story behind AI’s sales race",
@@ -300,20 +326,7 @@
         "ChatGPT",
         "OpenAI"
       ],
-      "id": 23
-    },
-    {
-      "title": "Klarna backs Google UCP to power AI agent payments",
-      "summary": "Klarna aims to address the lack of interoperability between conversational AI agents and backend payment systems by backing Google’s Universal Commerce Protocol (UCP), an open standard designed to ...",
-      "source": "AI News",
-      "date": "2026-02-02",
-      "url": "https://www.artificialintelligence-news.com/news/klarna-backs-google-ucp-power-ai-agent-payments/",
-      "cat": "news",
-      "hot": true,
-      "tags": [
-        "Google"
-      ],
-      "id": 24
+      "id": 25
     },
     {
       "title": "DHS is using Google and Adobe AI to make videos",
@@ -326,7 +339,7 @@
       "tags": [
         "Google"
       ],
-      "id": 25
+      "id": 26
     },
     {
       "title": "What AI “remembers” about you is privacy’s next frontier",
@@ -339,7 +352,7 @@
       "tags": [
         "Google"
       ],
-      "id": 26
+      "id": 27
     },
     {
       "title": "Rules fail at the prompt, succeed at the boundary",
@@ -352,21 +365,6 @@
       "tags": [
         "Anthropic",
         "Claude"
-      ],
-      "id": 27
-    },
-    {
-      "title": "OpenAI’s latest product lets you vibe code science",
-      "summary": "OpenAI just revealed what its new in-house team, OpenAI for Science, has been up to. The firm has released a free LLM-powered tool for scientists called Prism, which embeds ChatGPT in a text editor...",
-      "source": "Artificial intelligence – MIT Technology Review",
-      "date": "2026-01-27",
-      "url": "https://www.technologyreview.com/2026/01/27/1131793/openais-latest-product-lets-you-vibe-code-science/",
-      "cat": "tools",
-      "hot": true,
-      "tags": [
-        "ChatGPT",
-        "OpenAI",
-        "LLM"
       ],
       "id": 28
     },
